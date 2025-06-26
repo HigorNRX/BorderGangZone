@@ -90,17 +90,22 @@ Faz a borda piscar (flash) para o jogador com a cor especificada.
 ## 🧭 Esquema Visual
 
 ```
-                   TMinY
-                    ↓
-       TMinX →   *-----------------------------* ← TMaxX
-                 |                             |
-                 |         ZONA TOTAL          |
-                 |   *---------------------*   | ← BMinY
-                 |   |      IN ZONE        |   |
-                 |   |   (área útil)       |   |
-                 |   *---------------------*   | ← BMaxY
-                 |                             |
-                 *-----------------------------* ← TMaxY
+                                            TMinY
+                                             v
+        -------------------------------------* < TMinX
+        |                    BMinY           |
+        |    In Zone           v             |
+        |         -------------* < BMinX     |
+        |         |            |             |
+        |         | Out Zone   |             |
+        |         |            |             |
+        |         |            |             |
+        | BMaxX > *-------------             |
+        |         ^                          |  
+        |        BMaxY                       |
+TMaxX > *-------------------------------------  
+        ^
+      TMaxY
 ```
 
 ---
